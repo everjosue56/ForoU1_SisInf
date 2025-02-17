@@ -26,6 +26,7 @@ const Convertor = () => {
   return (
     <View>
       {/* Seleccionar moneda base */}
+
       <Text style={globalStyles.subTitle}>Selecciona tu moneda</Text>
       <View style={globalStyles.container}>
         <TouchableOpacity style={globalStyles.button} onPress={() => setModalFromVisible(true)}>
@@ -34,6 +35,7 @@ const Convertor = () => {
       </View>
 
       {/* Modal para seleccionar moneda base */}
+
       <Modal visible={modalFromVisible} transparent animationType="slide">
         <View style={globalStyles.modalContainer}>
           <View style={globalStyles.modalContent}>
@@ -57,6 +59,7 @@ const Convertor = () => {
 
 
       {/* Seleccionar moneda destino */}
+
       <Text style={globalStyles.subTitle}>Convertir a</Text>
       <View style={globalStyles.container}>
         <TouchableOpacity style={globalStyles.button} onPress={() => setModalToVisible(true)}>
@@ -65,6 +68,7 @@ const Convertor = () => {
       </View>
 
       {/* Modal para seleccionar moneda destino */}
+
       <Modal visible={modalToVisible} transparent animationType="slide">
         <View style={globalStyles.modalContainer}>
           <View style={globalStyles.modalContent}>
@@ -86,8 +90,10 @@ const Convertor = () => {
       </Modal>
 
       {/* Ingreso del monto */}
+
       <View>
            {/* Input para ingresar el monto */}
+
            <Text style = {globalStyles.subTitle}>Ingrese el monto</Text>
       <TextInput
         style={globalStyles.input}
@@ -98,13 +104,14 @@ const Convertor = () => {
       />
 
         {/* Botón para convertir */}
+        
         <TouchableOpacity style={globalStyles.buttonConvertor} onPress={handleConvert}>
         <Text style={globalStyles.buttonText}>Convertir</Text>
       </TouchableOpacity>
        
       </View>
       <View style = {globalStyles.containerResult} >
-      <Text style = {globalStyles.result}>{`La total de la conversion de ${selectedCurrencyFrom} a ${selectedCurrencyTo} es de ${convertedAmount} `}</Text>
+      <Text style = {globalStyles.result}>{`La total de la conversion de ${selectedCurrencyFrom} a ${selectedCurrencyTo} es de: ${convertedAmount} `}</Text>
       </View>
     </View>
   );
